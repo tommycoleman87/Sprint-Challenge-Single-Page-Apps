@@ -8,9 +8,15 @@ export default function SearchForm({ onSearch }) {
     setQuery({ ...query, name: event.target.value })
   }
 
+  const search = (event) => {
+     onSearch(query.name);
+    event.preventDefault();
+    
+  }
+
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(query)}>
+      <form onSubmit={(event) => search(event)}>
         <input
           onChange={handleInputChange}
           placeholder="name"
