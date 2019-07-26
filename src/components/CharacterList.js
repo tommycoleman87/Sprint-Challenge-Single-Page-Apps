@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import CharacterCard from './CharacterCard';
-export default function CharacterList() {
+    function CharacterList() {
   // TODO: Add useState to track data from useEffect
     const [characters, setCharacters] = useState([])
   useEffect(() => {
@@ -24,3 +24,5 @@ export default function CharacterList() {
     </section>
 
 }
+
+export default CharacterList;
